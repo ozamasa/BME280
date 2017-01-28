@@ -71,7 +71,7 @@ def readData():
 	h = compensate_H(hum_raw)
 
 	import requests
-	requests.get("https://live.shiolab.com/sensors/new?site=%s&temperature=%s&pressure=%s&humidity=%s" % (1, t, p, h))
+	requests.get("https://live.shiolab.com/sensors/new?site=%s&temperature=%s&pressure=%s&humidity=%s" % ("shiolab", t, p, h))
 
 def compensate_P(adc_P):
 	global  t_fine
